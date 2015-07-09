@@ -17,7 +17,7 @@
              alt="cart picture" name="cart"></a>
     </td>
 
-    <td>Total in cart: ${TOTAL} ({COUNT} items)
+    <td>购物车总计: ${TOTAL} ({COUNT} 件商品)
      </td>
 
    </tr>

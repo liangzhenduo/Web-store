@@ -31,13 +31,13 @@ set_error_handler("customHandler");
 
 // Show meaningful instructions for UPDATE or INSERT
 if (isset($_SESSION["loginUsername"]))
-   $instructions = "Please amend your details below as required.";
+   $instructions = "请按要求修改信息";
 else
-   $instructions = "Please fill in the details below to join.";
+   $instructions = "请填写下列信息";
 
 // Takes <form> heading, instructions, action, formVars name, and formErrors
 // name as parameters
-$template = new winestoreFormTemplate("Customer Details", 
+$template = new winestoreFormTemplate("用户信息", 
                 $instructions, S_VALIDATE, "custFormVars", "custErrors");
 
 session_start();
@@ -80,20 +80,21 @@ if (DB::isError($countryResult))
    trigger_error($countryResult->getMessage(), E_USER_ERROR); 
 
 // Create widgets for each of the customer fields
-$template->mandatoryWidget("nickname", "Nickname:", 50);
-$template->mandatoryWidget("address", "Address:", 50);
-$template->mandatoryWidget("city", "City:", 50);
-$template->optionalWidget("state", "State:", 20);
-$template->mandatoryWidget("zipcode", "Zip code:", 10);
-$template->selectWidget("country_id", "Country:",
+$template->mandatoryWidget("nickname", "昵称:", 50);
+$template->mandatoryWidget("address", "地址:", 50);
+$template->mandatoryWidget("city", "市/县/州:", 50);
+$template->optionalWidget("state", "省/区/市:", 20);
+$template->mandatoryWidget("zipcode", "邮编:", 20);
+$template->selectWidget("country_id", "国家:",
                         "country", $countryResult);
-$template->optionalWidget("phone", "Telephone:", 15);
+$template->optionalWidget("phone", "电话:", 20);
 
 // Only show the username/email and password widgets to new users
 if (!isset($_SESSION["loginUsername"]))
 {
-   $template->mandatoryWidget("loginUsername", "Email/username:", 50);
-   $template->passwordWidget("loginPassword", "Password:", 15);
+   $template->mandatoryWidget("loginUsername", "邮箱:", 50);
+   $template->passwordWidget("loginPassword", "密码:", 20);
+   $template->passwordWidget("loginPassword", "确认密码:", 20);
 }
 
 // Add buttons and messages, and show the page

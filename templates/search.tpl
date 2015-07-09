@@ -10,7 +10,7 @@
 </tr>
 <!-- END row -->
 </table>
-<br>{BEGINROW} - {ENDROW} of {ROWS} wines found matching your criteria
+<br>{BEGINROW} - {ENDROW}      共 {ROWS} 件匹配的商品
 <br>
 <!-- BEGIN links -->
 <!-- BEGIN link -->

@@ -75,7 +75,6 @@ if (count($_SESSION["ccErrors"]) > 0)
 // OK to update the order
 $query = "UPDATE orders SET 
           creditcard = '{$_SESSION["ccFormVars"]["creditcard"]}',
-          expirydate = '{$_SESSION["ccFormVars"]["expirydate"]}',
           instructions = '{$_SESSION["ccFormVars"]["instructions"]}'
           WHERE cust_id = -1 AND
                 order_id = {$_SESSION["order_no"]}";

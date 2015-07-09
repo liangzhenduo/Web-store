@@ -16,16 +16,9 @@ We have billed your fictional SurchargeCard credit card.
 
 Your fictional order contains:
 <!-- BEGIN items -->
-Quantity Wine                                                   Unit Price Total
+数量  Wine                                                   单价 总计
 <!-- BEGIN row -->
 {QTY}{WINE}{PRICE}{TOTAL}
 <!-- END row -->
 Total of this order: {ORDER_TOTAL}
 <!-- END items -->
-
-Thank you for shopping at Hugh and Dave's Online Wines!
-
-Kind Regards,
-
-
-Hugh and Dave, http://www.webdatabasebook.com/

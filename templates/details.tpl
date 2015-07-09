@@ -1,14 +1,13 @@
 <!-- BEGIN inputform -->
 <form method="{METHOD}" action="{S_VALIDATE}">
-<h1>{FORMHEADING}</h1>
-<b>{INSTRUCTIONS}</b>
+<h1><center>{FORMHEADING}</center></h1>
 <p>
-<table>
+<center><table>
 <col span="1" align="right">
 <!-- BEGIN widget -->
 <!-- BEGIN select -->
    <tr>
-      <td><font color="red">{SELECTTEXT}</font></td>
+      <td><font>{SELECTTEXT}</font></td>
       <td><select name="{SELECTNAME}">
 <!-- BEGIN option -->
       <option{SELECTED} value="{OPTIONVALUE}">{OPTIONTEXT}
@@ -18,11 +17,11 @@
 <!-- END select -->
 <!-- BEGIN mandatoryinput -->
    <tr>
-      <td><font color="red">{MINPUTTEXT}</font>
+      <td><font>{MINPUTTEXT}</font>
       </td>
       <td>
 <!-- BEGIN mandatoryerror -->
-      <font color="red">{MERRORTEXT}</font><br>
+      <font>{MERRORTEXT}</font><br>
 <!-- END mandatoryerror -->      
          <input type="text" name="{MINPUTNAME}" 
           value="{MINPUTVALUE}" size={MINPUTSIZE}>
@@ -35,7 +34,7 @@
       </td>
       <td>
 <!-- BEGIN optionalerror -->
-      <font color="red">{OERRORTEXT}</font><br>
+      <font>{OERRORTEXT}</font><br>
 <!-- END optionalerror -->      
          <input type="text" name="{OINPUTNAME}" 
           value="{OINPUTVALUE}" size={OINPUTSIZE}>
@@ -44,11 +43,11 @@
 <!-- END optionalinput -->
 <!-- BEGIN passwordinput -->
    <tr>
-      <td><font color="red">{PINPUTTEXT}</font>
+      <td><font>{PINPUTTEXT}</font>
       </td>
       <td>
 <!-- BEGIN passworderror -->
-      <font color="red">{PERRORTEXT}</font><br>
+      <font>{PERRORTEXT}</font><br>
 <!-- END passworderror -->      
          <input type="password" name="{PINPUTNAME}" 
           value="{PINPUTVALUE}" size={PINPUTSIZE}>
@@ -57,8 +56,8 @@
 <!-- END passwordinput -->
 <!-- END widget -->
 <tr>
-   <td><input type="submit" value="提交"></td>
+   <td><input type="submit" value="更新"></td>
 </tr>
-</table>
+</table></center>
 </form>
 <!-- END inputform -->

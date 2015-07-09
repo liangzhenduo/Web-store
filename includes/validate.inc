@@ -176,7 +176,7 @@ function checkCard($field, $errors, $formVars)
 }
 
 // Check a credit card expiry date
-function checkExpiry($field, $errors, $formVars)
+/*function checkExpiry($field, $errors, $formVars)
 {
    if (!ereg("^([0-9]{2})/([0-9]{2})$", 
              $_SESSION["{$formVars}"]["{$field}"], $parts))
@@ -213,5 +213,5 @@ function checkExpiry($field, $errors, $formVars)
    }
    
    return true;
-}
+}*/
 ?>

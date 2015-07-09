@@ -50,7 +50,7 @@ if (isset($_SESSION["order_no"]))
    unset($_SESSION["order_no"]);
 }
 else
-   $_SESSION["message"] = "There is nothing in your cart.";
+   $_SESSION["message"] = "您的购物车还是空的";
 
 // HTTP_REFERER isn't set by some browsers. If it isn't, then 
 // redirect to the main page.
