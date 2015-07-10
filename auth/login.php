@@ -26,13 +26,13 @@ session_start();
 
 // Takes <form> heading, instructions, action, formVars name, and 
 // formErrors name as parameters
-$template = new winestoreFormTemplate("Login", 
+$template = new winestoreFormTemplate("登录", 
                 "Please enter your username and password.",
                 S_LOGINCHECK, "loginFormVars", "loginErrors");
 
 
-$template->mandatoryWidget("loginUsername", "Username/Email:", 50);
-$template->passwordWidget("loginPassword", "Password:", 8);
+$template->mandatoryWidget("loginUsername", "用户名:", 50);
+$template->passwordWidget("loginPassword", "密码:", 8);
 
 // Add buttons and messages, and show the page
 $template->showWinestore(NO_CART, B_HOME);

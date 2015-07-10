@@ -1,44 +1,35 @@
-<h1>Your order (reference # {CUST_ID} - {ORDER_ID}) has
-been dispatched</h1>
-Thank you {CUSTTITLE} {SURNAME}, 
-your order has been completed and dispatched.
-Your order reference number is {CUST_ID} - {ORDER_ID}. 
-Please quote this number in any correspondence.
+<h1><center>交易成功</center></h1>
+您的订单号为 {CUST_ID} - {ORDER_ID}。 
+请牢记您的订单号。
 <br>
-<p>If it existed, the order would have been shipped to: 
+<p>您购买的商品将配送至：
 <br><b>
-{CUSTTITLE} {FIRSTNAME} {INITIAL} {SURNAME}
-<br>
-{ADDRESS}
-<br>{CITY} {STATE}
-<br>{COUNTRY} {ZIPCODE}
+ {NICKNAME}
+<br>{COUNTRY} {STATE} {CITY} {ADDRESS} {ZIPCODE}
 </b>
 <br>
 <br>
-<p>We have billed your fictional credit card.
+<p>订单详情：
 <!-- BEGIN items -->
-<table border=0 width=70% cellpadding=0 cellspacing=5>
+<table border=0 width=100% cellpadding=0 cellspacing=5>
 <tr>
-   <td><b>Quantity</b></td>
-   <td><b>Wine</b></td>
-   <td align="right"><b>Unit Price</b></td>
-   <td align="right"><b>Total</b></td>
+   <td><b><center>数量</center></b></td>
+   <td><b><center>品名</center></b></td>
+   <td><b><center>单价</center></b></td>
+   <td><b><center>总计</center></b></td>
 </tr>
 <!-- BEGIN row -->
 <tr>
-   <td>{QTY}</td>
-   <td>{WINE}</td>
-   <td align="right">{PRICE}</td>
-   <td align="right">{TOTAL}</td>
+   <td><center>{QTY}</center></td>
+   <td bgcolor="silver"><center>{WINE}</center></td>
+   <td><center>{PRICE}</center></td>
+   <td bgcolor="gray"><center>{TOTAL}</center></td>
 </tr>
 <!-- END row -->
 <tr></tr>
-<tr>
-   <td colspan=2 align="left"><i><b>Total of this order</b></td>
-   <td></td>
-   <td align="right"><b><i>{ORDER_TOTAL}</b></td>
-</tr>
+<tr><center>
+   <td colspan=2><i><b>订单总计：{ORDER_TOTAL}</b></i></td>
+</center></tr>
 </table>
 <!-- END items -->
-<p><i>An email confirmation has been sent to you.
-Thank you for shopping at Hugh and Dave's Online Wines.</i>
+<p><i><center>一封确认邮件已经发送到您的邮箱。感谢您在本店购物！</center></i>

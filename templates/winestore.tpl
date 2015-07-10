@@ -1,13 +1,12 @@
-<!DOCTYPE HTML PUBLIC
-                 "-//W3C//DTD HTML 4.01 Transitional//EN"
-                 "http://www.w3.org/TR/html401/loose.dtd">
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   <title>{TITLE}</title>
 </head>
 <body bgcolor="white">
-<p align="right"><b>{LOGIN_STATUS}</b></p>
+<p align="center"><img scr="/store/templates/banner.jpg" width="1200" height="100"></p>
+<p align="right">
+  <b>{LOGIN_STATUS}</b></p>
 <!-- BEGIN cartheader -->
 <table>
   <tr>
@@ -24,10 +23,10 @@
 </table>
 <!-- END cartheader -->
 <!-- BEGIN message -->
-<br><b><font color="red">{INFO_MESSAGE}</font></b>
+<b><font color="red">{INFO_MESSAGE}</font></b>
 <!-- END message -->
 {PAGE_BODY}
-<!-- BEGIN buttons -->
+<!-- BEGIN buttons --><center>
 <table>
 <tr>
 <!-- BEGIN form -->
@@ -36,10 +35,8 @@
   </form></td>
 <!-- END form -->
 </tr>
-</table>
+</table></center>
 <!-- END buttons -->
-<br><a href="http://validator.w3.org/check/referer">
-  <img src="http://www.w3.org/Icons/valid-html401" height="31" width="88" 
-        align="right" border="0" alt="Valid HTML 4.01!"></a>
+<br>
 </body>
 </html>

@@ -50,15 +50,12 @@ function send_confirmation_email($custID, $orderID, $connection)
    $row = $result->fetchRow(DB_FETCHMODE_ASSOC);
 
    // Start by setting up the "To:" email address
-   $to = "{$row["firstname"]} {$row["surname"]} <{$row["user_name"]}>";
+   $to = "{$row["nickname"]} <{$row["user_name"]}>";
 
    // Now setup all the customer fields
-   $template->setVariable("TITLE", showTitle($row["title_id"], $connection));
-   $template->setVariable("SURNAME", $row["surname"]);
+   $template->setVariable("NICKNAME", $row["nickname"]);
    $template->setVariable("CUST_ID", $custID);
    $template->setVariable("ORDER_ID", $orderID);
-   $template->setVariable("FIRSTNAME", $row["firstname"]);
-   $template->setVariable("INITIAL", $row["initial"]);
    $template->setVariable("ADDRESS", $row["address"]);
    $template->setVariable("CITY", $row["city"]);
    $template->setVariable("STATE", $row["state"]);
@@ -113,7 +110,7 @@ function send_confirmation_email($custID, $orderID, $connection)
    $out = $template->get();
 
 
-   if (USE_PEAR == false)
+   /*if (USE_PEAR == false)
    {
      // --------------------------------------------
      // The internal PHP mail() function is used only if USE_PEAR is false
@@ -150,7 +147,7 @@ function send_confirmation_email($custID, $orderID, $connection)
      $smtpMail =& Mail::factory("smtp");
      $smtpMail->send($to, $headers, $out);
      // --------------------------------------------
-   }
+   }*/
 }
 
 // ----------

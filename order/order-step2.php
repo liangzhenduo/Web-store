@@ -31,7 +31,7 @@ sessionAuthenticate(S_SHOWCART);
 // Check that the cart isn't empty
 if (!isset($_SESSION["order_no"]))
 {
-   $_SESSION["message"] = "Your cart is empty!";
+   $_SESSION["message"] = "您的订单已提交";
 
    header("Location: " . S_SHOWCART);
    exit;
@@ -52,7 +52,7 @@ foreach($_POST as $varname => $value)
      pearclean($_POST, $varname, 128, $connection);
 
 // Check if mandatory credit card entered
-if (checkMandatory("creditcard", "SurchargeCard", 
+/*if (checkMandatory("creditcard", "SurchargeCard", 
               "ccErrors", "ccFormVars"))
    // Validate credit card using Luhn algorithm
    checkCard("creditcard", "ccErrors", "ccFormVars");
@@ -70,7 +70,7 @@ if (count($_SESSION["ccErrors"]) > 0)
     // There are errors.  Relocate back to step #1
     header("Location: " . S_ORDER_1);
     exit;
-}
+}*/
                       
 // OK to update the order
 $query = "UPDATE orders SET 

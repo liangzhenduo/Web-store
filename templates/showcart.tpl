@@ -12,9 +12,9 @@
    <tr>
        <td><center><input type="text" size=5 name="{QUANTITY_NAME}" 
             value="{QUANTITY_VALUE}"></center></td>
-       <td><center>{WINE}</center></td>
+       <td bgcolor="silver"><center>{WINE}</center></td>
        <td><center>${ITEM_PRICE}</center></td>
-       <td><center>${TOTAL_VALUE}</center></td>
+       <td bgcolor="gray"><center>${TOTAL_VALUE}</center></td>
    </tr>
 <!-- END item -->
 </table>

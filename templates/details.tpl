@@ -55,9 +55,10 @@
   </tr>
 <!-- END passwordinput -->
 <!-- END widget -->
-<tr>
-   <td><input type="submit" value="更新"></td>
-</tr>
+
 </table></center>
+<tr>
+   <td><center><input type="submit" value="提交"></center></td>
+</tr>
 </form>
 <!-- END inputform -->

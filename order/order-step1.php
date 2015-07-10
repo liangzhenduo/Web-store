@@ -31,15 +31,15 @@ sessionAuthenticate(S_SHOWCART);
 
 // Takes form heading, instructions, action, formVars name, and 
 // formErrors name as parameters
-$template = new winestoreFormTemplate("Finalise Your Order", 
+$template = new winestoreFormTemplate("提交订单", 
             "Please enter your SurchargeCard details " . 
             "(Try: 8000000000001001 ) and delivery instructions.",
             S_ORDER_2, "ccFormVars", "ccErrors");
 
 // Create the credit card widgets
-$template->mandatoryWidget("creditcard", "SurchargeCard:", 16);
+$template->mandatoryWidget("creditcard", "支付账户:", 20);
 //$template->mandatoryWidget("expirydate", "Expiry Date (mm/yy):", 5);
-$template->optionalWidget("instructions", "Delivery Instructions:", 128);
+$template->optionalWidget("instructions", "备注:", 64);
 
 $template->showWinestore(SHOW_ALL, B_SHOW_CART | B_HOME);
 ?>
